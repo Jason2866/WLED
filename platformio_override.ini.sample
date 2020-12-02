@@ -39,6 +39,7 @@ build_flags = ${common.build_flags_esp8266}
 ; PIN defines for 2 wire LEDs
    -D CLKPIN=0
    -D DATAPIN=2
+
 ; to drive analog LED strips (aka 5050), uncomment the following
 ; PWM pins 5,12,13,15 are used with Magic Home LED Controller (default)
    -D WLED_USE_ANALOG_LEDS
@@ -48,3 +49,15 @@ build_flags = ${common.build_flags_esp8266}
 ;   -D WLED_USE_BWLT11
 ; and to enable channel 5 for RGBW-CT led strips this
 ;   -D WLED_USE_5CH_LEDS
+
+; Custom ANALOG LED GPIO settings if your setup is different from the above predefined
+; R pin for analog LED strip
+;  -D RPIN 5
+; G pin for analog LED strip
+;  -D GPIN 12
+; B pin for analog LED strip
+;  -D BPIN 15
+; W pin for analog LED strip
+;  -D WPIN 13
+; disable PIN 12 if used by analog LEDs !!!
+;  -U RLYPIN
